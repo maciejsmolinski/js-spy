@@ -1,10 +1,3 @@
-/* Detect object's properties being used */
-
-
-// Object to be spied, can be Modernizr library for example
-var user = { name: 'Maciej', surname: 'Smolinski', fullName: 'Maciej Smolinski' };
-
-
 // Spy Function
 function spyProperties (debugNamespace, objectReference) {
 
@@ -29,16 +22,3 @@ function spyProperties (debugNamespace, objectReference) {
       });
     });
 }
-
-
-
-
-
-// Spy Properties of user object, debug info to be namespaced with 'user'
-spyProperties('user', user);
-
-// Use object properties in a regular manner
-console.log('Full Name is: ' + user.name + ' ' + user.surname);
-
-// [Property Usage] user.name
-// [Property Usage] user.surname
