@@ -31,9 +31,12 @@
  * @return {[type]}                 [description]
  */
 function spyProperties (debugNamespace, objectReference) {
+  // @TODO: Spy unless already spied
+  // @TODO: Detect Object.defineProperty, Object.keys and Array.prototype.forEach
 
   Object.keys(objectReference).forEach(function (property) {
     try {
+
 
       // Store original value as __<propertyName>
       objectReference['__' + property] = objectReference[property];
