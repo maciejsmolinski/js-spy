@@ -29,3 +29,35 @@ console.log('Full Name is: ' + user.name + ' ' + user.surname);
 
 That's about it!
 
+## Bonus: Simply check how jQuery works
+
+1) Spy jQuery methods:
+```
+spyProperties('$', $);
+spyProperties('$.fn', $.fn);
+```
+
+2) Call method you want to get an understanding of:
+```
+$('body').attr('class');
+```
+
+3) Watch the console output (debug):
+```
+// [Property Usage] $.fn
+// [Property Usage] $.fn.init
+// [Property Usage] $.fn.find
+// [Property Usage] $.find
+// [Property Usage] $.fn.pushStack
+// [Property Usage] $.fn.constructor
+// [Property Usage] $.fn
+// [Property Usage] $.fn.init
+// [Property Usage] $.merge
+// [Property Usage] $.fn.length
+// [Property Usage] $.fn.selector
+// [Property Usage] $.fn.attr
+// [Property Usage] $.attr
+// [Property Usage] $.access
+// [Property Usage] $.fn.length
+// [Property Usage] $.type
+```
