@@ -1,0 +1,1 @@
+Very first draft of method that helps spy what properties of an object are being used
