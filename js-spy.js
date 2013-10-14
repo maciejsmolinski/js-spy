@@ -28,7 +28,7 @@
  *
  * @param  {String} debugNamespace  Debugging label (namespace)
  * @param  {Object} objectReference Object which properties you want to spy
- * @return {[type]}                 [description]
+ * @return {void}
  */
 function spyProperties (debugNamespace, objectReference) {
   // @TODO: Spy unless already spied
