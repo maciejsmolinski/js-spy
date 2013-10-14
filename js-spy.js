@@ -21,7 +21,7 @@
  *   // Access object's properties as usual:
  *   console.log('Full Name is: ' + user.name + ' ' + user.surname);
  *
- *   // Watch debug info in console:
+ *   // Watch debug info in the console:
  *   [Property Usage] user.name
  *   [Property Usage] user.surname
  *
