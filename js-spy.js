@@ -39,3 +39,6 @@ spyProperties('user', user);
 
 // Use object properties in a regular manner
 console.log('Full Name is: ' + user.name + ' ' + user.surname);
+
+// [Property Usage] user.name
+// [Property Usage] user.surname
