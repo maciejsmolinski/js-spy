@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Very first draft of method that helps spy what properties of an object are being used
+Very first draft of method that helps spy what properties of an object are being used on a given website. Can be useful when trying to make Modernizr as light as possible.
 
 ## Sample Code
 
