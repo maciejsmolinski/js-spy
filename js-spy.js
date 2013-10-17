@@ -45,7 +45,7 @@ function spyProperties (debugNamespace, objectReference) {
       // Store original value as __<propertyName>
       objectReference[__property] = objectReference[property];
       // Reset property to undefined
-      objectReference[property]        = undefined;
+      objectReference[property]   = undefined;
 
       // Define spy (will write debug info into console and return original value)
       Object.defineProperty(objectReference, property, {
@@ -68,7 +68,7 @@ function spyProperties (debugNamespace, objectReference) {
 
       if (objectReference[__property]) {
         // Restore original value
-        objectReference[property]        = objectReference[__property];
+        objectReference[property]   = objectReference[__property];
         // Reset __<property> to undefined
         objectReference[__property] = undefined;
       }
