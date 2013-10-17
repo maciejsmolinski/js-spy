@@ -61,3 +61,8 @@ $('body').attr('class');
 // [Property Usage] $.fn.length
 // [Property Usage] $.type
 ```
+
+## Collaborators
+
+Many thanks for providing commits to:
+* @mateuszgachowski
