@@ -36,11 +36,14 @@ function spyProperties (debugNamespace, objectReference) {
   // @TODO: Maybe add an execution time to each debug information so the developer gets an understanding on how long does each part of the code execute
 
   Object.keys(objectReference).forEach(function (property) {
+
+    var __property = '__' + property;
+
     try {
 
 
       // Store original value as __<propertyName>
-      objectReference['__' + property] = objectReference[property];
+      objectReference[__property] = objectReference[property];
       // Reset property to undefined
       objectReference[property]        = undefined;
 
@@ -49,10 +52,13 @@ function spyProperties (debugNamespace, objectReference) {
         get: function () {
 
           // Write debug info into console
-          console.debug('[Property Usage] %debugNamespace.%property'.replace('%debugNamespace', debugNamespace).replace('%property', property));
+          console.debug('[Property Usage] %debugNamespace.%property'
+            .replace('%debugNamespace', debugNamespace)
+            .replace('%property', property)
+          );
 
           // Return original value
-          return objectReference['__' + property];
+          return objectReference[__property];
 
         }
       });
@@ -60,11 +66,11 @@ function spyProperties (debugNamespace, objectReference) {
     } catch (error) {
       // The only workaround for Object.defineProperty problems in IE8
 
-      if (objectReference['__' + property]) {
+      if (objectReference[__property]) {
         // Restore original value
-        objectReference[property]        = objectReference['__' + property];
+        objectReference[property]        = objectReference[__property];
         // Reset __<property> to undefined
-        objectReference['__' + property] = undefined;
+        objectReference[__property] = undefined;
       }
 
     }
