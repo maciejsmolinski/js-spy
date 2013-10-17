@@ -31,6 +31,7 @@
  * @return {void}
  */
 function spyProperties (debugNamespace, objectReference) {
+  // @TODO: Add JSHint rules, use Strict Mode
   // @TODO: Spy unless already spied
   // @TODO: Detect Object.defineProperty, Object.keys and Array.prototype.forEach
   // @TODO: Maybe add an execution time to each debug information so the developer gets an understanding on how long does each part of the code execute
